@@ -1,5 +1,5 @@
-principal = 1000.0  # Initial investment amount
-rate = 0.07  # Annual interest rate
+principal = 1000.0  
+rate = 0.07 
 
 for year in range(1, 31):
     amount = principal * (1 + rate) ** year
