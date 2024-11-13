@@ -1,0 +1,35 @@
+import random
+
+def generate_numbers(difficulty):
+    if difficulty == 1:
+        num1 = random.randint(1, 9)
+        num2 = random.randint(1, 9)
+    elif difficulty == 2:
+        num1 = random.randint(10, 99)
+        num2 = random.randint(10, 99)
+    else:
+        print("Invalid difficulty level. Defaulting to level 1.")
+        num1 = random.randint(1, 9)
+        num2 = random.randint(1, 9)
+    return (num1, num2)
+
+def multiplication_quiz():
+    difficulty = int(input("Enter difficulty level (1 for single-digit, 2 for two-digit): "))
+
+    while True:
+        num1, num2 = generate_numbers(difficulty)
+        while True:
+            print(f"How much is {num1} times {num2}?")
+            answer = int(input("Your answer: "))
+            if answer == num1 * num2:
+                print("Very good!")
+                break
+            else:
+                print("No. Please try again.")
+        
+        another = input("Do you want to solve another problem? (yes/no): ").strip().lower()
+        if another != 'yes':
+            print("Thank you for practicing! Goodbye!")
+            break
+
+multiplication_quiz()
