@@ -11,5 +11,5 @@ def rhombus(n):
 
     for b in range (65 + a - 2, 64 - 1):
         print (chr(b), end="")
-
+        print()
     

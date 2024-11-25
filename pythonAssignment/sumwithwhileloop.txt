@@ -1,0 +1,7 @@
+def sum_with_while_loop(list):
+    total = 0
+    index = 0
+    while index < len(list):
+        total += lst[index]
+        index += 1
+    return total

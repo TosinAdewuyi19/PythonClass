@@ -7,4 +7,4 @@ for i in range(3):
 	name = input("enter citizen's name: ")
 	earnings = float(input("Enter citizen's earning: "))
 tax = calculate_tax(earnings)
-print(f"{name} owes ${tax:} in taxes.")
+print(f"{name} owes ${tax:  } in taxes.")
