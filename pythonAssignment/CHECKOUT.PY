@@ -4,8 +4,10 @@ def main():
 
     cart = []
     vat_rate = 7.5
-    discount_rate = 0.1  
-    while True:
+    discount_rate = 0.1 
+    adding_products = True
+ 
+    while adding_products:
         product_name = input("What did the user buy? (or type 'done' to finish): ")
         if product_name.lower() == 'done':
             break
@@ -26,7 +28,7 @@ def main():
     subtotal = sum(item["total"] for item in cart)
 
    
-    discount = subtotal * discount_rate if subtotal > 100 
+    discount = subtotal * discount_rate if subtotal > 100 else 0
 
     vat = subtotal * (vat_rate / 100)
 
