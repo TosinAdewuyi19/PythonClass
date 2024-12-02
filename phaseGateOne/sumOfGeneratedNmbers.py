@@ -9,7 +9,7 @@ sum = number1 + number2
 	
 answer = str(input("Enter the sum of these numbers: "))
 if answer == sum:
-	print("true")
+	print("True")
 if answer != sum:
 	print("False")
 	
