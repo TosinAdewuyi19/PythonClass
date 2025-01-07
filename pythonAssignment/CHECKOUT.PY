@@ -1,4 +1,4 @@
-def main():
+def checkout():
     print(" SEMICOLON STORE! \nMAIN BRANCH \nLOCATION: 312, HERBERT MACAULAY SABO YABA, LAGOS. \nTEL: 08083484717 \nDate : 02-Dec-24 10:48:11 pm\nCashier; Cashier's Name")
     
 
@@ -49,8 +49,12 @@ def main():
     print("=======================================")
     print("\nTHIS IS NOT A RECEIPT KINDLY PAY!", total)
 
+    def checkout():
+    
+    	print(input("how much did the customer give you?: "))
 
+    
     
 
 
-print(main())
+print(checkout())
