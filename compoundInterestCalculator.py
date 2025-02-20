@@ -10,7 +10,6 @@ def calculate_compound_interest(principal, monthly_contribution, years, annual_r
 
 
 def main():
-    
     initial_investment = float(input("Enter initial investment: "))
     monthly_contribution = float(input("Enter monthly contribution: ") or 0)
     time_years = int(input("Enter length of time in years: "))

@@ -4,10 +4,11 @@ class Bank:
         self.accounts = {}
 
 
-    def create_account(self, account):
-        if account.account_number in self.accounts:
-            raise ValueError("Account number already exists")
-        self.accounts[account.account_number] = account
+    def add_account(self, account):
+        if account == self.accounts:
+            raise ValueError("Account already exists")
+        else:
+            return self.accounts[account]
 
 
     def find_account_by_account_number(self, account_number):
@@ -21,8 +22,9 @@ class Bank:
             raise ValueError("Account number does not exist")
         return account.deposit(amount)
 
-    def withdraw(self, account_number, amount):
-        account = self.find_account_by_account_number(account_number)
+    def withdraw(self, account_number, amount, password):
+        if not self.update_password(password, self.accounts[account_number].password):
+            account = self.find_account_by_account_number(account_number)
         if account_number not in self.accounts:
             raise ValueError("Account number does not exist")
         return self.accounts[account_number].withdraw(amount)
@@ -42,3 +44,7 @@ class Bank:
 
     def __str__(self):
         return f"Bank(name={self.name}, accounts={len(self.accounts)})"
+
+    def update_password(self, old_password, new_password1, account_number):
+        account = self.find_account_by_account_number(account_number)
+        return account.update_password(old_password, new_password1)
